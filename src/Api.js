@@ -26,6 +26,18 @@ class YandexMusicApi {
             .then(json => json['access_token']);
     };
 
+    send_token_to_backend = async (branch, hash, token) => {
+        const url = `https://${branch}.koteeq.me/yandex`;
+
+        let data = {
+            hash: hash,
+            token: token
+        };
+
+        return await this.post(url, data)
+            .then(resp => resp.json());
+    };
+
     serialize = (obj) => {
         let str = [];
         for (let p in obj)
@@ -46,6 +58,9 @@ class YandexMusicApi {
     post = (url, data) => {
         return fetch(url, {
             method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
             body: this.serialize(data)
         }).then(resp => {
             if (!resp.ok) {

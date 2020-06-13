@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Badge, CardDeck, Col, Container, Image, Row} from 'react-bootstrap'
+import {Badge, CardDeck, Col, Container, Row} from 'react-bootstrap'
 import AuthForm from "./AuthForm";
 import TrustCard from "./TrustCard";
 
@@ -12,25 +12,13 @@ class App extends Component {
                     <Col>
                         <Row>
                             <Container>
-                                <h4>Яндекс.Музыка - Telegram <Badge variant="primary">Bot</Badge></h4>
+                                <h4><a href="tg://resolve?domain=nowplaybot">@nowplaybot</a> <Badge variant="primary">Yandex.Music</Badge></h4>
                             </Container>
                         </Row>
                         <Row>
                             <Container>
-                                <Image src="logo.png" width="100%" roundedCircle/>
-                            </Container>
-                        </Row>
-                        <Row>
-                            <Container>
-                                <p>Данный бот позволяет прослушивать плейлист дня и другие умные плейлисты, Ваши личные
-                                    плейлисты, а так же понравившиеся треки. Вы можете лайкать и дизлайкать треки,
-                                    получать текст песен, искать новые музыкальные предпочтения, делиться ими со всеми и
-                                    слушать любимую музыку в мессенджере Telegram.</p>
-                                <p>
-                                    Trello для вопросов и предложений:
-                                    <a href="https://trello.com/b/D5f3kRxF"> Yandex.Music Telegram Bot</a></p>
-                                <p>Канал с обновлениями и новостями:
-                                    <a href="tg://resolve?domain=music_yandex_channel"> @music_yandex_channel</a></p>
+                                <p>Эта форма предназначена для соединения вашей Яндекс.Музыки и бота для отправки последних прослушанных треков в Телеграм.</p>
+                                <p>Смело вводите свои данные ниже. Если переживаете, покажите эту форму любому другу-программисту — он объяснит, что всё в порядке.</p>
                             </Container>
                         </Row>
                     </Col>
@@ -77,10 +65,10 @@ class App extends Component {
                         <Row className="d-flex justify-content-between">
                             <Col>
                                 <span>Исходный код: <a
-                                    href="https://github.com/MarshalX/yandex-music-token">yandex-music-token</a></span>
+                                    href="https://github.com/aprosvetova/nowplaybot-yandex-auth">nowplaybot-yandex-auth</a></span>
                             </Col>
                             <Col className="text-right">
-                                <span> Автор: <a href="tg://resolve?domain=MarshalX">@MarshalX</a></span>
+                                <span> Автор <a href="https://github.com/MarshalX/yandex-music-token">оригинальной странички</a>: <a href="tg://resolve?domain=MarshalX">@MarshalX</a></span>
                             </Col>
                         </Row>
                     </Container>
