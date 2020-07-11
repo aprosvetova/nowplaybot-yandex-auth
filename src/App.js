@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Badge, CardDeck, Col, Container, Row} from 'react-bootstrap'
+import {Badge, CardDeck, Col, Container, Image, Row} from 'react-bootstrap'
 import AuthForm from "./AuthForm";
 import TrustCard from "./TrustCard";
 
@@ -13,6 +13,11 @@ class App extends Component {
                         <Row>
                             <Container>
                                 <h4><a href="tg://resolve?domain=nowplaybot">@nowplaybot</a> <Badge variant="primary">Yandex.Music</Badge></h4>
+                            </Container>
+                        </Row>
+                        <Row>
+                            <Container style={{'text-align': 'center'}}>
+                                <Image src="logo.svg" width="40%"/>
                             </Container>
                         </Row>
                         <Row>
